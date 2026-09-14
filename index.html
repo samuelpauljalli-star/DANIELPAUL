@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>JALLI Daniel Paul & Esther — Holy Christian Matrimony</title>
+  <meta name="description"
+    content="Celebrating the sacred Christian wedding union of Daniel Paul & Esther. Solemnized by Rev. Charles Sunny from Addanki at Eleswaravari Palem, Bapatla, AP.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✝️</text></svg>">
+</head>
+
+<body>
+
+  <!-- Romantic Ambient Floating Petals & Divine Sparkle Canvas -->
+  <canvas id="particlesCanvas"></canvas>
+
+  <!-- Celebratory Confetti & Cross/Heart Canvas -->
+  <canvas id="celebrationCanvas"></canvas>
+
+  <!-- Sticky Luxury Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Wedding Monogram">
+        <span class="monogram">JALLI</span>
+        <span class="brand-name">JALLIDaniel Paul & Esther</span>
+      </a>
+
+      <!-- Mobile Hamburger Toggle Button -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+        </svg>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#wedding-reel" class="nav-link">Wedding Reel 🔒</a></li>
+        <li><a href="#sermon-section" class="nav-link">Worship Message</a></li>
+        <li><a href="#bible-verses" class="nav-link">Holy Scriptures</a></li>
+        <li><a href="#events" class="nav-link">Celebration & Venues</a></li>
+        <li class="mobile-rsvp-item"><a href="#rsvp" class="btn-luxury" style="display:inline-flex;">RSVP /
+            Blessings</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="action-pill-btn" id="shareNavBtn" title="Share Wedding Invitation">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z" />
+          </svg>
+          Share
+        </button>
+        <a href="#rsvp" class="btn-luxury">RSVP / Blessings</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-backdrop-glow"></div>
+    <div class="container hero-content">
+      <div class="sacred-cross-badge">
+        <span>✝</span>
+      </div>
+      <p class="hero-subtitle-top">United in Christ’s Eternal Grace</p>
+      <span class="hero-script-tag">Holy Matrimony</span>
+      <h1 class="hero-names shimmer-text">
+        JALLI Daniel Paul <span class="ampersand">&</span> Esther
+      </h1>
+
+      <!-- Key Bible Verse Banner -->
+      <div class="hero-bible-verse tilt-card">
+        <p class="verse-quote">"Therefore what God has joined together, let no one separate."</p>
+        <span class="verse-ref">— Mark 10:9</span>
+      </div>
+
+      <div class="hero-date-venue">
+        <span>Wednesday, September 30, 2026</span>
+        <span class="dot-sep">✦</span>
+        <span>Eleswaravari Palem, Addanki, Bapatla, AP</span>
+      </div>
+
+      <div class="officiant-highlight">
+        <span>Solemnized & Blessed by <strong>Rev. Charles Sunny</strong> (Addanki)</span>
+      </div>
+
+      <!-- Quick Actions (Calendar & Share) -->
+      <div class="hero-quick-actions">
+        <button class="action-pill-btn" id="addToCalHeroBtn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z" />
+          </svg>
+          Add to Google Calendar
+        </button>
+        <button class="action-pill-btn" id="shareInviteHeroBtn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z" />
+          </svg>
+          Share Invitation
+        </button>
+        <button class="action-pill-btn" id="quickBlessingBtn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+          </svg>
+          Send Love Reaction
+        </button>
+      </div>
+
+      <!-- Live Countdown Timer until September 30, 2026 -->
+      <div class="countdown-box" id="countdownBox">
+        <div class="countdown-item tilt-card">
+          <span class="countdown-num" id="countDays">00</span>
+          <span class="countdown-unit">Days</span>
+        </div>
+        <div class="countdown-item tilt-card">
+          <span class="countdown-num" id="countHours">00</span>
+          <span class="countdown-unit">Hours</span>
+        </div>
+        <div class="countdown-item tilt-card">
+          <span class="countdown-num" id="countMinutes">00</span>
+          <span class="countdown-unit">Mins</span>
+        </div>
+        <div class="countdown-item tilt-card">
+          <span class="countdown-num" id="countSeconds">00</span>
+          <span class="countdown-unit">Secs</span>
+        </div>
+      </div>
+
+      <!-- Hero Call To Action Group -->
+      <div class="hero-cta-group">
+        <a href="#wedding-reel" class="btn-luxury" id="heroPlayReelBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" />
+          </svg>
+          Watch Wedding Reel 🔒
+        </a>
+        <a href="#sermon-section" class="btn-outline">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z" />
+          </svg>
+          Worship Message
+        </a>
+        <a href="#rsvp" class="btn-outline">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+          </svg>
+          RSVP & Blessings
+        </a>
+      </div>
+    </div>
+
+    <a href="#wedding-reel" class="scroll-indicator" aria-label="Scroll down">
+      <span>Scroll to Discover</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
+      </svg>
+    </a>
+  </section>
+
+  <!-- Video 1: Cinematic Wedding Moment Reel (PASSCODE PROTECTED: song.mp4) -->
+  <section class="video-section reveal-on-scroll" id="wedding-reel">
+    <div class="container">
+      <div class="section-label">Private Family Moment</div>
+      <h2 class="section-title">The Wedding Moment Reel 🔒</h2>
+      <p class="section-subtitle">A protected, sacred memory of Daniel Paul & Esther. Passcode required to unlock and
+        play.</p>
+
+      <div class="video-theater-wrapper">
+        <!-- Ambient Backlight Canvas for Video Glow Effect -->
+        <canvas id="videoAmbientCanvas" class="video-ambient-backlight"></canvas>
+
+        <div class="video-player-container tilt-card is-locked" id="videoPlayerContainer">
+          <div class="video-wrapper" id="videoWrapper">
+            <!-- Embedded song.mp4 Video File -->
+            <video id="weddingVideo" class="video-element" playsinline preload="none">
+              <source src="song.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+
+            <!-- Locked Passcode Big Button Overlay -->
+            <div class="video-big-play-overlay" id="bigPlayOverlay">
+              <button class="play-ring-btn lock-ring-btn" id="bigPlayBtn" aria-label="Unlock Protected Video">
+                <svg id="lockRingIcon" width="34" height="34" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" />
+                </svg>
+              </button>
+              <div class="play-label" id="lockPlayLabel">🔒 Protected Video Reel</div>
+              <span class="click-fullscreen-hint" id="lockStatusHint">Enter Passcode to Unlock & Play</span>
+            </div>
+
+            <!-- Custom Video Luxury Controls -->
+            <div class="custom-video-controls" id="customControls">
+              <!-- Timeline Scrubber -->
+              <div class="video-timeline-container" id="timelineContainer">
+                <div class="video-progress-buffer" id="progressBuffer"></div>
+                <div class="video-progress-bar" id="progressBar">
+                  <div class="video-scrub-handle"></div>
+                </div>
+              </div>
+
+              <!-- Controls Toolbar -->
+              <div class="controls-main-row">
+                <div class="controls-left">
+                  <!-- Play / Pause -->
+                  <button class="ctrl-btn" id="playPauseBtn" title="Play/Pause">
+                    <svg id="playIcon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                    <svg id="pauseIcon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"
+                      style="display:none;">
+                      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                    </svg>
+                  </button>
+
+                  <!-- Time Indicator -->
+                  <span class="video-time-display">
+                    <span id="currentTime">0:00</span> / <span id="durationTime">0:00</span>
+                  </span>
+
+                  <!-- Volume & Mute -->
+                  <div class="volume-control-group">
+                    <button class="ctrl-btn" id="muteBtn" title="Mute/Unmute">
+                      <svg id="volumeHighIcon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                      </svg>
+                      <svg id="volumeMutedIcon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                        style="display:none;">
+                        <path
+                          d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                      </svg>
+                    </button>
+                    <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.05" value="1">
+                  </div>
+                </div>
+
+                <div class="controls-right">
+                  <!-- Speed Toggle -->
+                  <button class="ctrl-btn speed-badge" id="speedToggleBtn" title="Playback Speed">1.0x</button>
+
+                  <!-- Fullscreen Theater Modal Trigger -->
+                  <button class="ctrl-btn" id="openModalReelBtn" title="Full Screen Cinema View">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Metadata Card -->
+        <div class="video-meta-card tilt-card">
+          <div>
+            <div class="video-info-title">
+              <span>"Timeless Celebration" — Wedding Moment Reel</span>
+              <span class="video-badge-tag" id="videoSecurityBadge">🔒 Locked / Private</span>
+            </div>
+            <p class="video-info-desc">A protected, joyful celebration of the holy covenant between Daniel Paul and
+              Esther.</p>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <button class="btn-luxury" id="fullscreenReelDirectBtn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" />
+              </svg>
+              Unlock & Watch Fullscreen
+            </button>
+            <button class="btn-outline" id="lockToggleBtn" style="display:none;">
+              🔒 Lock Video Again
+            </button>
+            <button class="btn-outline" id="restartVideoBtn" style="display:none;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z" />
+              </svg>
+              Replay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Passcode Unlock Security Modal -->
+  <div class="lock-modal-overlay" id="videoLockModal">
+    <div class="lock-modal-card tilt-card" id="lockModalCard">
+      <button class="lock-modal-close" id="lockModalCloseBtn" aria-label="Close">✕</button>
+      <div class="lock-modal-icon">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" />
+        </svg>
+      </div>
+      <h3 class="lock-modal-title">Private Wedding Reel</h3>
+      <p class="lock-modal-desc">This video is private. Enter the passcode to unlock and view the moment reel.</p>
+
+      <form id="passcodeForm">
+        <div class="passcode-input-wrapper">
+          <input type="password" id="videoPasscodeInput" class="passcode-input" placeholder="Enter Passcode..."
+            autocomplete="off" maxlength="10" required autofocus>
+          <button type="button" class="passcode-toggle-btn" id="passcodeToggleBtn" title="Show/Hide PIN">👁</button>
+        </div>
+
+        <div class="lock-error-msg" id="lockErrorMsg">🔒 Incorrect Passcode. Access denied.</div>
+
+        <button type="submit" class="btn-luxury"
+          style="width:100%; justify-content:center; padding:0.9rem; margin-top:1.25rem;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10z" />
+          </svg>
+          Unlock & Play Video
+        </button>
+      </form>
+
+      <div class="passcode-footer-hint">
+        <span>Protected for family & congregation of Daniel Paul & Esther</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video 2: Worship Message & Preaching the Word of God Section (YouTube Video: 8S4CZpjz0AA) -->
+  <section class="video-section sermon-section reveal-on-scroll" id="sermon-section">
+    <div class="container">
+      <div class="section-label">Spiritual Message & Holy Blessing</div>
+      <h2 class="section-title">Preaching the Word of God</h2>
+      <p class="section-subtitle">A spiritual worship message and wedding blessing on the divine covenant of Christian
+        marriage.</p>
+
+      <div class="sermon-grid-card tilt-card">
+        <div class="sermon-video-wrapper">
+          <div class="video-player-container youtube-player-box" id="sermonPlayerContainer">
+            <div class="video-wrapper youtube-video-wrapper" id="sermonWrapper">
+              <!-- Embedded YouTube Player playing directly on website with zero redirection -->
+              <iframe
+                id="sermonYoutubeIframe"
+                class="youtube-iframe-element"
+                src="https://www.youtube-nocookie.com/embed/8S4CZpjz0AA?enablejsapi=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1"
+                title="Preaching the Word of God — Worship Message & Holy Blessing"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+
+              <!-- Interactive Big Play Overlay for Inline Playback -->
+              <div class="video-big-play-overlay sermon-play-overlay" id="sermonBigPlayOverlay">
+                <button class="play-ring-btn" id="sermonBigPlayBtn" aria-label="Play Worship Message Inline">
+                  <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </button>
+                <div class="play-label">Play Worship Message</div>
+                <span class="click-fullscreen-hint">▶ Click to Play Inline (or Watch in Cinema)</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 1rem; text-align: center;">
+            <button class="btn-luxury" id="watchSermonFullscreenBtn"
+              style="width: 100%; justify-content: center; padding: 0.85rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" />
+              </svg>
+              Watch Worship Message in Fullscreen Cinema
+            </button>
+          </div>
+        </div>
+
+        <div class="sermon-content-details">
+          <div class="sermon-badge">Holy Matrimony Worship Message</div>
+          <h3 class="sermon-title">"Built on the Solid Rock of Christ"</h3>
+          <p class="sermon-speaker">Officiated & Preached by: <strong>Rev. Charles Sunny</strong> (Addanki)</p>
+
+          <div class="sermon-verse-highlight">
+            <p>"Unless the Lord builds the house, the builders labor in vain. Unless the Lord watches over the city, the
+              guards stand watch in vain."</p>
+            <span>— Psalm 127:1</span>
+          </div>
+
+          <p class="sermon-description">
+            God instituted Holy Matrimony as a sacred covenant reflecting the everlasting love of Christ. In this
+            worship message, Rev. Charles Sunny shares timeless biblical wisdom on love, mutual respect, prayer, and
+            building a Christ-centered family.
+          </p>
+
+          <div class="sermon-points-list">
+            <div class="point-item">
+              <span class="point-icon">✝</span>
+              <div>
+                <strong>A Threefold Cord</strong>
+                <p>Ecclesiastes 4:12 — When Christ is at the center, the bond cannot be broken.</p>
+              </div>
+            </div>
+            <div class="point-item">
+              <span class="point-icon">♥</span>
+              <div>
+                <strong>Selfless Love & Honor</strong>
+                <p>Ephesians 5:25 — Loving one another with purity, as Christ loved the church.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Big Screen Cinema Modal Overlay (Expands to Full Screen on Click) -->
+  <div class="cinema-modal-overlay" id="cinemaModal">
+    <div class="cinema-modal-header">
+      <div class="cinema-title" id="cinemaTitle">✝ Daniel Paul & Esther — Worship Message</div>
+      <div class="cinema-actions">
+        <button class="cinema-btn" id="cinemaNativeFullscreenBtn" title="Toggle Native Fullscreen">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" />
+          </svg>
+        </button>
+        <button class="cinema-btn cinema-close-btn" id="cinemaCloseBtn" aria-label="Close Cinema View">✕</button>
+      </div>
+    </div>
+    <div class="cinema-modal-body" id="cinemaModalBody">
+      <video id="cinemaModalVideo" class="cinema-video-element" controls playsinline style="display:none;"></video>
+      <iframe id="cinemaModalIframe" class="cinema-video-element cinema-iframe-element" src="" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:none;"></iframe>
+    </div>
+  </div>
+
+  <!-- Floating Picture-In-Picture Mini Player (Active When Scrolled Past Video Section) -->
+  <div class="pip-mini-player" id="pipMiniPlayer">
+    <div class="pip-header">
+      <span>Now Playing: Wedding Reel</span>
+      <button class="pip-close-btn" id="pipCloseBtn" aria-label="Dismiss Mini Player">✕</button>
+    </div>
+    <div class="pip-body" id="pipBody">
+      <canvas id="pipCanvas" class="pip-canvas-target"></canvas>
+      <div class="pip-overlay-play" id="pipOverlayPlay">▶</div>
+    </div>
+  </div>
+
+  <!-- Floating Instant Heart Reaction FAB -->
+  <button class="floating-blessing-btn" id="floatingBlessingBtn" title="Tap to Send Love Reaction & Blessings"
+    aria-label="Send Love Reaction">
+    ♥
+  </button>
+
+  <!-- Floating Back to Top Button -->
+  <button class="scroll-to-top-btn" id="scrollToTopBtn" title="Scroll to top" aria-label="Scroll to top">
+    ↑
+  </button>
+
+  <!-- Christian Marriage Holy Bible Verses Showcase -->
+  <section class="bible-verses-section reveal-on-scroll" id="bible-verses">
+    <div class="container">
+      <div class="section-label">Divine Scripture</div>
+      <h2 class="section-title">Christian Marriage in the Holy Bible</h2>
+      <p class="section-subtitle">Sacred verses guiding Daniel Paul & Esther into a life rooted in faith, devotion, and
+        unconditional grace.</p>
+
+      <div class="scripture-grid">
+        <!-- Verse 1: 1 Corinthians 13:4-8 -->
+        <div class="scripture-card tilt-card">
+          <div class="scripture-header">
+            <span class="scripture-ref">1 Corinthians 13:4-8</span>
+            <span class="scripture-icon">✝</span>
+          </div>
+          <p class="scripture-text">"Love is patient, love is kind. It does not envy, it does not boast, it is not
+            proud. It does not dishonor others, it is not self-seeking, it is not easily angered, it keeps no record of
+            wrongs. Love does not delight in evil but rejoices with the truth. It always protects, always trusts, always
+            hopes, always perseveres. Love never fails."</p>
+          <div class="scripture-footer">The Perfection of Love</div>
+        </div>
+
+        <!-- Verse 2: Ecclesiastes 4:9-12 -->
+        <div class="scripture-card tilt-card">
+          <div class="scripture-header">
+            <span class="scripture-ref">Ecclesiastes 4:9-12</span>
+            <span class="scripture-icon">✝</span>
+          </div>
+          <p class="scripture-text">"Two are better than one, because they have a good return for their labor: If either
+            of them falls down, one can help the other up... Though one may be overpowered, two can defend themselves. A
+            cord of three strands is not quickly broken."</p>
+          <div class="scripture-footer">A Cord of Three Strands</div>
+        </div>
+
+        <!-- Verse 3: Genesis 2:24 -->
+        <div class="scripture-card tilt-card">
+          <div class="scripture-header">
+            <span class="scripture-ref">Genesis 2:24</span>
+            <span class="scripture-icon">✝</span>
+          </div>
+          <p class="scripture-text">"That is why a man leaves his father and mother and is united to his wife, and they
+            become one flesh."</p>
+          <div class="scripture-footer">Holy Union</div>
+        </div>
+
+        <!-- Verse 4: Colossians 3:14 -->
+        <div class="scripture-card tilt-card">
+          <div class="scripture-header">
+            <span class="scripture-ref">Colossians 3:14</span>
+            <span class="scripture-icon">✝</span>
+          </div>
+          <p class="scripture-text">"And over all these virtues put on love, which binds them all together in perfect
+            unity. Let the peace of Christ rule in your hearts."</p>
+          <div class="scripture-footer">Perfect Unity in Christ</div>
+        </div>
+
+        <!-- Verse 5: 1 John 4:19 -->
+        <div class="scripture-card tilt-card">
+          <div class="scripture-header">
+            <span class="scripture-ref">1 John 4:19</span>
+            <span class="scripture-icon">✝</span>
+          </div>
+          <p class="scripture-text">"We love because He first loved us. If we love one another, God lives in us and His
+            love is made complete in us."</p>
+          <div class="scripture-footer">God's Eternal Love</div>
+        </div>
+
+        <!-- Verse 6: Proverbs 18:22 -->
+        <div class="scripture-card tilt-card">
+          <div class="scripture-header">
+            <span class="scripture-ref">Proverbs 18:22</span>
+            <span class="scripture-icon">✝</span>
+          </div>
+          <p class="scripture-text">"He who finds a wife finds what is good and receives favor from the Lord."</p>
+          <div class="scripture-footer">God's Blessing & Favor</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Event Schedule & Venue Details -->
+  <section class="schedule-section reveal-on-scroll" id="events">
+    <div class="container">
+      <div class="section-label">Sacred Celebration</div>
+      <h2 class="section-title">Wedding Schedule & Venues</h2>
+      <p class="section-subtitle">Join our family and congregation in prayer and fellowship for the Holy Matrimony &
+        Grand Reception.</p>
+
+      <div class="schedule-grid">
+        <!-- Card 1: Holy Matrimony -->
+        <div class="schedule-card tilt-card">
+          <div class="event-icon-badge">⛪</div>
+          <h3 class="event-name">Holy Matrimony Service</h3>
+          <div class="event-date-highlight">Wednesday, September 30, 2026</div>
+          <div class="event-time">10:00 AM Onwards</div>
+          <div class="event-venue">Church at Eleswaravari Palem</div>
+          <div class="event-address">Eleswaravari Palem, Addanki Mandal, Bapatla District, Andhra Pradesh</div>
+          <div class="event-officiant-tag">Solemnized by: Rev. Charles Sunny (Addanki)</div>
+          <div class="event-dresscode">Attire: Traditional & Formal Grace</div>
+
+          <div class="event-actions-group">
+            <a href="https://maps.google.com/?q=Addanki+Bapatla+Andhra+Pradesh" target="_blank" class="btn-outline">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              </svg>
+              Church Route Map
+            </a>
+            <button class="action-pill-btn" id="addMatrimonyCalBtn">
+              📅 Add to Calendar
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2: Grand Dinner & Reception -->
+        <div class="schedule-card tilt-card">
+          <div class="event-icon-badge">🎉</div>
+          <h3 class="event-name">Grand Wedding Reception</h3>
+          <div class="event-date-highlight">Friday, October 02, 2026</div>
+          <div class="event-time">06:30 PM Onwards</div>
+          <div class="event-venue">The Grand Celebration Hall</div>
+          <div class="event-address">Addanki, Bapatla District, Andhra Pradesh</div>
+          <div class="event-officiant-tag">A Joyful Evening of Dinner & Fellowship</div>
+          <div class="event-dresscode">Attire: Festive / Elegant Traditional</div>
+
+          <div class="event-actions-group">
+            <a href="https://maps.google.com/?q=Addanki+Andhra+Pradesh" target="_blank" class="btn-outline">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              </svg>
+              Reception Hall Guide
+            </a>
+            <button class="action-pill-btn" id="addReceptionCalBtn">
+              📅 Add to Calendar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP & Prayer Request Section -->
+  <section class="rsvp-section reveal-on-scroll" id="rsvp">
+    <div class="container">
+      <div class="rsvp-banner-card tilt-card">
+        <div class="sacred-cross-badge" style="margin-bottom: 0.5rem;">
+          <span>✝</span>
+        </div>
+        <div class="section-label">Grace & Fellowship</div>
+        <h2 class="section-title" style="margin-bottom: 0.75rem;">RSVP & Offer a Prayer for the Couple</h2>
+        <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 2.5rem auto;">
+          We humbly request your prayers and presence as Daniel Paul & Esther enter into holy matrimony. Please confirm
+          your attendance so we may welcome you joyfully.
+        </p>
+
+        <form id="rsvpForm"
+          style="max-width: 550px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.25rem;">
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 220px; text-align: left;">
+              <label class="form-label" for="rsvpName">Your Full Name</label>
+              <input type="text" id="rsvpName" class="form-input" placeholder="e.g. Samuel & Family" required>
+            </div>
+            <div style="flex: 1; min-width: 140px; text-align: left;">
+              <label class="form-label" for="rsvpGuests">Number of Guests</label>
+              <select id="rsvpGuests" class="form-select">
+                <option value="1">1 Person</option>
+                <option value="2">2 Persons</option>
+                <option value="3">3 Persons</option>
+                <option value="4+">Family (4+ Persons)</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="text-align: left;">
+            <label class="form-label" for="rsvpEvents">Attending Events</label>
+            <select id="rsvpEvents" class="form-select">
+              <option value="Both Holy Matrimony & Reception">Both Holy Matrimony (Sep 30) & Reception (Oct 02)</option>
+              <option value="Holy Matrimony Service (Sep 30)">Holy Matrimony Service only (Sep 30)</option>
+              <option value="Grand Reception (Oct 02)">Grand Reception only (Oct 02)</option>
+            </select>
+          </div>
+
+          <div style="text-align: left;">
+            <label class="form-label" for="rsvpPrayer">A Prayer / Blessing for the Couple (Optional)</label>
+            <textarea id="rsvpPrayer" class="form-textarea" style="min-height: 80px;"
+              placeholder="May the grace of our Lord Jesus Christ surround Daniel Paul and Esther with eternal peace and love..."></textarea>
+          </div>
+
+          <div style="display: flex; gap: 1.5rem; justify-content: center; margin-top: 0.25rem; flex-wrap: wrap;">
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: var(--gold-light);">
+              <input type="radio" name="rsvpStatus" value="Joyfully Attending" checked
+                style="accent-color: var(--gold-primary);">
+              Joyfully Attending
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: var(--text-muted);">
+              <input type="radio" name="rsvpStatus" value="Sending Prayers & Blessings"
+                style="accent-color: var(--gold-primary);">
+              Prayers From Afar
+            </label>
+          </div>
+
+          <button type="submit" class="btn-luxury"
+            style="justify-content: center; margin-top: 0.5rem; padding: 0.9rem 2.2rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+            Send RSVP & Prayers
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="sacred-cross-badge" style="margin: 0 auto 0.75rem auto;">✝</div>
+      <div class="footer-monogram shimmer-text">DANIEL PAUL & ESTHER</div>
+      <div class="footer-quote">"Two are better than one... A cord of three strands is not quickly broken."</div>
+      <div class="footer-verse-ref">— Ecclesiastes 4:9,12</div>
+      <div class="ornament-divider">
+        <span>✝</span>
+      </div>
+      <p class="footer-copy">© 2026 Daniel Paul & Esther. Solemnized by Rev. Charles Sunny, Addanki at Eleswaravari
+        Palem, Bapatla, AP.</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Message -->
+  <div class="toast-notification" id="toastNotification">
+    <span id="toastIcon">✨</span>
+    <span id="toastMessage">Thank you for your warm blessing!</span>
+  </div>
+
+  <!-- JavaScript Application Script -->
+  <script src="script.js"></script>
+</body>
+
+</html>
