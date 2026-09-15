@@ -922,21 +922,85 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* --------------------------------------------------------------------------
-     12. RSVP & Prayer Submission Controller
+     12. RSVP & Prayer Submission Controller (Delivered to pauljalli25@gmail.com)
      -------------------------------------------------------------------------- */
   const rsvpForm = document.getElementById('rsvpForm');
+  const rsvpSubmitBtn = document.getElementById('rsvpSubmitBtn');
+  const rsvpBtnText = document.getElementById('rsvpBtnText');
+
+  function fallbackMailto(name, status, guests, events, contact, prayer) {
+    const subject = encodeURIComponent(`✝ Wedding RSVP & Prayer: ${name} — Daniel Paul & Esther`);
+    const body = encodeURIComponent(
+      `WEDDING RSVP & PRAYER FOR DANIEL PAUL & ESTHER\n` +
+      `-----------------------------------------------\n` +
+      `Guest Name: ${name}\n` +
+      `Attendance Status: ${status}\n` +
+      `Number of Guests: ${guests}\n` +
+      `Events Attending: ${events}\n` +
+      `Contact Info: ${contact}\n\n` +
+      `Prayer & Blessing for the Couple:\n${prayer}\n\n` +
+      `Submitted: ${new Date().toLocaleString()}`
+    );
+    window.location.href = `mailto:pauljalli25@gmail.com?subject=${subject}&body=${body}`;
+    triggerCelebration();
+    showToast(`✝ Thank you, ${name}! Opening email to deliver your blessings to pauljalli25@gmail.com`);
+    if (rsvpForm) rsvpForm.reset();
+  }
 
   if (rsvpForm) {
-    rsvpForm.addEventListener('submit', (e) => {
+    rsvpForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const name = document.getElementById('rsvpName').value.trim();
-      const guests = document.getElementById('rsvpGuests').value;
-      const events = document.getElementById('rsvpEvents').value;
+      const name = document.getElementById('rsvpName')?.value.trim() || 'Well-wisher';
+      const guests = document.getElementById('rsvpGuests')?.value || '1 Person';
+      const events = document.getElementById('rsvpEvents')?.value || 'Both Events';
+      const contact = document.getElementById('rsvpContact')?.value.trim() || 'Not provided';
+      const prayer = document.getElementById('rsvpPrayer')?.value.trim() || 'Wishing you a blessed and joyful married life under God\'s grace!';
       const status = document.querySelector('input[name="rsvpStatus"]:checked')?.value || 'Joyfully Attending';
 
-      triggerCelebration();
-      showToast(`✝ Thank you, ${name}! Your RSVP & Blessings for ${events} (${guests}) have been received!`);
-      rsvpForm.reset();
+      const originalBtnText = rsvpBtnText ? rsvpBtnText.textContent : 'Send RSVP & Prayers';
+      if (rsvpSubmitBtn) {
+        rsvpSubmitBtn.disabled = true;
+        if (rsvpBtnText) rsvpBtnText.textContent = 'Sending Message...';
+      }
+
+      const payload = {
+        _subject: `✝ Wedding RSVP & Prayer: ${name} (${status})`,
+        _template: 'table',
+        _captcha: 'false',
+        Guest_Name: name,
+        Attendance_Status: status,
+        Number_of_Guests: guests,
+        Events_Attending: events,
+        Contact_Info: contact,
+        Prayer_and_Blessings: prayer,
+        Sent_At: new Date().toLocaleString()
+      };
+
+      try {
+        const response = await fetch('https://formsubmit.co/ajax/pauljalli25@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if (response.ok) {
+          triggerCelebration();
+          showToast(`✝ Thank you, ${name}! Your RSVP & Prayer has been sent to pauljalli25@gmail.com.`);
+          rsvpForm.reset();
+        } else {
+          fallbackMailto(name, status, guests, events, contact, prayer);
+        }
+      } catch (err) {
+        fallbackMailto(name, status, guests, events, contact, prayer);
+      } finally {
+        if (rsvpSubmitBtn) {
+          rsvpSubmitBtn.disabled = false;
+          if (rsvpBtnText) rsvpBtnText.textContent = originalBtnText;
+        }
+      }
     });
   }
 
