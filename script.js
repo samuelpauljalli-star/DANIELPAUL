@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function getYouTubeId(src) {
     if (/^[a-zA-Z0-9_-]{11}$/.test(src)) return src;
     const match = src.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
-    return match ? match[1] : '8S4CZpjz0AA';
+    return match ? match[1] : 'VERYuDOpNYY';
   }
 
   function openCinemaModal(videoSrc, titleText, currentTime = 0) {
@@ -541,9 +541,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* --------------------------------------------------------------------------
-     5. Video 2: Worship Message Video (YouTube: 8S4CZpjz0AA — Inline & Cinema)
+     5. Video 2: Worship Message Video (YouTube: VERYuDOpNYY — Inline & Cinema)
      -------------------------------------------------------------------------- */
-  const YOUTUBE_SERMON_ID = '8S4CZpjz0AA';
+  const YOUTUBE_SERMON_ID = 'VERYuDOpNYY';
   const sermonYoutubeIframe = document.getElementById('sermonYoutubeIframe');
   const sermonBigPlayBtn = document.getElementById('sermonBigPlayBtn');
   const sermonBigPlayOverlay = document.getElementById('sermonBigPlayOverlay');
