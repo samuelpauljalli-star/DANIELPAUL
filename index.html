@@ -559,7 +559,7 @@
           <div class="event-dresscode">Attire: Traditional & Formal Grace</div>
 
           <div class="event-actions-group">
-            <a href="https://maps.google.com/?q=Addanki+Bapatla+Andhra+Pradesh" target="_blank" class="btn-outline">
+            <a href="https://maps.app.goo.gl/wH6fKC9Gd6QJdo427" target="_blank" rel="noopener noreferrer" class="btn-outline">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
                 <path
                   d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
@@ -584,7 +584,7 @@
           <div class="event-dresscode">Attire: Festive / Elegant Traditional</div>
 
           <div class="event-actions-group">
-            <a href="https://maps.google.com/?q=Addanki+Andhra+Pradesh" target="_blank" class="btn-outline">
+            <a href="https://maps.app.goo.gl/wH6fKC9Gd6QJdo427" target="_blank" rel="noopener noreferrer" class="btn-outline">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
                 <path
                   d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
@@ -624,21 +624,27 @@
             <div style="flex: 1; min-width: 140px; text-align: left;">
               <label class="form-label" for="rsvpGuests">Number of Guests</label>
               <select id="rsvpGuests" class="form-select">
-                <option value="1">1 Person</option>
-                <option value="2">2 Persons</option>
-                <option value="3">3 Persons</option>
-                <option value="4+">Family (4+ Persons)</option>
+                <option value="1 Person">1 Person</option>
+                <option value="2 Persons">2 Persons</option>
+                <option value="3 Persons">3 Persons</option>
+                <option value="Family (4+ Persons)">Family (4+ Persons)</option>
               </select>
             </div>
           </div>
 
-          <div style="text-align: left;">
-            <label class="form-label" for="rsvpEvents">Attending Events</label>
-            <select id="rsvpEvents" class="form-select">
-              <option value="Both Holy Matrimony & Reception">Both Holy Matrimony (Sep 30) & Reception (Oct 02)</option>
-              <option value="Holy Matrimony Service (Sep 30)">Holy Matrimony Service only (Sep 30)</option>
-              <option value="Grand Reception (Oct 02)">Grand Reception only (Oct 02)</option>
-            </select>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 220px; text-align: left;">
+              <label class="form-label" for="rsvpEvents">Attending Events</label>
+              <select id="rsvpEvents" class="form-select">
+                <option value="Both Holy Matrimony & Reception">Both Holy Matrimony (Sep 30) & Reception (Oct 02)</option>
+                <option value="Holy Matrimony Service (Sep 30)">Holy Matrimony Service only (Sep 30)</option>
+                <option value="Grand Reception (Oct 02)">Grand Reception only (Oct 02)</option>
+              </select>
+            </div>
+            <div style="flex: 1; min-width: 220px; text-align: left;">
+              <label class="form-label" for="rsvpContact">Phone / Email (Optional)</label>
+              <input type="text" id="rsvpContact" class="form-input" placeholder="e.g. 9876543210 or your@email.com">
+            </div>
           </div>
 
           <div style="text-align: left;">
@@ -660,14 +666,17 @@
             </label>
           </div>
 
-          <button type="submit" class="btn-luxury"
-            style="justify-content: center; margin-top: 0.5rem; padding: 0.9rem 2.2rem;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <button type="submit" id="rsvpSubmitBtn" class="btn-luxury"
+            style="justify-content: center; margin-top: 0.5rem; padding: 0.9rem 2.2rem; cursor: pointer;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" id="rsvpBtnIcon">
               <path
                 d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
             </svg>
-            Send RSVP & Prayers
+            <span id="rsvpBtnText">Send RSVP & Prayers</span>
           </button>
+          <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: -0.25rem;">
+            ✉ Messages are directly delivered to pauljalli25@gmail.com
+          </div>
         </form>
       </div>
     </div>
